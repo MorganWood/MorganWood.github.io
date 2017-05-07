@@ -75,20 +75,20 @@
 man是linux提供的一个手册，包含了绝大部分的命令、函数使用说明。该手册分成很多章节(section), 使用man时可以指定不同的章节来浏览。
 
 man中各个章节的意义如下:
-   1.    Standard    commands（标准命令） 
-   2.    System    calls（系统调用，如open,write） 
+   1.    Standard commands（标准命令） 
+   2.    System calls（系统调用，如open,write） 
    3.    Library    functions（库函数，如printf,fopen） 
    4.    Special    devices（设备文件的说明，/dev下各种设备） 
-   5.    File    formats（文件格式，如passwd） 
-   6.    Games    and    toys（游戏和娱乐） 
-   7.    Miscellaneous（杂项、惯例与协定等，例如Linux档案系统、网络协定、ASCII码； environ全局变量） 
+   5.    File formats（文件格式，如passwd） 
+   6.    Games and toys（游戏和娱乐） 
+   7.    Miscellaneous（杂项、惯例与协定等，例如Linux档案系统、网络协定、ASCII码、environ全局变量） 
    8.    Administrative    Commands（管理员命令，如ifconfig
 
    man是按照手册的章节号的顺序进行搜索的。
 </code></pre><p><strong>3.自动补全</strong><br>    在敲出命令的前几个字母的同时，按下tab键，系统会自动帮我们补全命令。</p>
 <p><strong>4.历史命令</strong><br>    当系统执行过一些命令后，可按上下键翻看以前的命令，history将执行过的命令列举出来。</p>
 <p><strong>5.文件管理</strong><br>    <1>查看文件信息:ls<br>    ls是英文单词list的简写，其功能为列出目录的内容，是用户最常用的命令之一，它类似于DOS下的dir命令。</1></p>
-<pre><code>Linux文件或者目录名称最长可以有265个字符，“.”代表当前目录，“..”代表上一级目录，以“.”开头的文件为隐 藏文件，需要用 -a 参数才能显示
+<pre><code>Linux文件或者目录名称最长可以有265个字符，“.”代表当前目录，“..”代表上一级目录，以“.”开头的文件为隐藏文件，需要用 -a 参数才能显示。
 </code></pre><table>
 <thead>
 <tr>
@@ -107,7 +107,7 @@ man中各个章节的意义如下:
 </tr>
 <tr>
 <td>-h</td>
-<td>配合-l以人性华的方式显示文件大小</td>
+<td>配合-l以人性化的方式显示文件大小</td>
 </tr>
 </tbody>
 </table>
@@ -223,7 +223,7 @@ Linux链接文件类似于Windows下的快捷方式。
 ln 源文件 链接文件
 ln -s 源文件 链接文件
 
-如果 没有-s 选项代表建立一个硬链接文件，两个文件占用相同大小的硬盘空间，即使删除了源文件，链接文件还是存在，所以-s选项是更常见的形式。
+如果没有-s选项代表建立一个硬链接文件，两个文件占用相同大小的硬盘空间，即使删除了源文件，链接文件还是存在，所以-s选项是更常见的形式。
 
 注意：如果软链接文件和源文件不在同一个目录，源文件要使用绝对路径，不能使用相对路径。
 
