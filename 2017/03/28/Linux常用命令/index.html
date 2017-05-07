@@ -54,7 +54,7 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2017-05-07T09:12:25.000Z"><a href="/2017/05/07/Linux常用命令/">2017-05-07</a></time>
+        <time datetime="2017-03-28T10:39:25.000Z"><a href="/2017/03/28/Linux常用命令/">2017-03-28</a></time>
       
       
   
@@ -89,25 +89,67 @@ man中各个章节的意义如下:
 <p><strong>4.历史命令</strong><br>    当系统执行过一些命令后，可按上下键翻看以前的命令，history将执行过的命令列举出来。</p>
 <p><strong>5.文件管理</strong><br>    <1>查看文件信息:ls<br>    ls是英文单词list的简写，其功能为列出目录的内容，是用户最常用的命令之一，它类似于DOS下的dir命令。</1></p>
 <pre><code>Linux文件或者目录名称最长可以有265个字符，“.”代表当前目录，“..”代表上一级目录，以“.”开头的文件为隐 藏文件，需要用 -a 参数才能显示
-
-|  参数   |   含义   |
-| --- | --- |
-|  -a  |  显示指定目录下所有子目录与文件，包括隐藏文件   |          
-|  -l  |  以列表方式显示文件的详细信息   |         
-|  -h  |  配合-l以人性华的方式显示文件大小   | 
-
-| 通配符  | 含义  |
-|---|---|
-| *  | 文件代表文件名中所有字符  |
-| ls t*  | 查找以t开头的文件   |
-| ls *txt  |  查找结尾为txt的文件 |
-| ?  | 代表文件名中任意一个字符  |
-| ls ?.c  | 只找第一个字符任意，后缀为.c的文件  |
-| \  | 如果要使通配符作为普通字符使用，可以在其前面加上转义字符。 |
-| ls\*a  | 查找文件名为*a的文件  |
-
-
-&lt;2&gt;输出重定向命令: &gt;
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>显示指定目录下所有子目录与文件，包括隐藏文件</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>以列表方式显示文件的详细信息</td>
+</tr>
+<tr>
+<td>-h</td>
+<td>配合-l以人性华的方式显示文件大小</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>通配符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>文件代表文件名中所有字符</td>
+</tr>
+<tr>
+<td>ls t*</td>
+<td>查找以t开头的文件</td>
+</tr>
+<tr>
+<td>ls *txt</td>
+<td>查找结尾为txt的文件</td>
+</tr>
+<tr>
+<td>?</td>
+<td>代表文件名中任意一个字符</td>
+</tr>
+<tr>
+<td>ls ?.c</td>
+<td>只找第一个字符任意，后缀为.c的文件</td>
+</tr>
+<tr>
+<td>\</td>
+<td>如果要使通配符作为普通字符使用，可以在其前面加上转义字符。</td>
+</tr>
+<tr>
+<td>ls*a</td>
+<td>查找文件名为*a的文件</td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;2&gt;输出重定向命令: &gt;
 Linux允许将命令执⾏结果重定向到一个文件，本应显示在终端上的内容保存到指定文件中。
 
 如：ls&gt;test.txt(test.txt如果不存在，则创建，存在则覆盖其内容)
@@ -127,17 +169,37 @@ clear作用为清除终端上的显示(类似于DOS的cls清屏功能)，也可�
 
 &lt;6&gt;切换工作目录： cd
 在使用Unix/Linux的时候，经常需要更换工作目录。cd命令可以帮助用户切换工作目录。 Linux所有的目录和文件名大小写敏感cd后面可跟绝对路径，也可以跟相对路径。如果省略目录，则默认切换到当前用户的主目录。
-
-
-| 命令  |   含义   |
-|---    |---    |
-|  cd   |  切换到当前用户的主目录(/home/用户目录），用户登陆的时候，默认的目录就是用户的主目录。     |
-|  cd~  |  切换到当前用户的主目录（/home/用户目录）     |
-|  cd.  |  切换到当前目录     |
-|  cd.. |  切换到上级目录     |
-|  cd-  |  可进入上次所在的目录     |
-
-&lt;7&gt;显示当前路径: pwd
+</code></pre><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cd</td>
+<td>切换到当前用户的主目录(/home/用户目录），用户登陆的时候，默认的目录就是用户的主目录。</td>
+</tr>
+<tr>
+<td>cd~</td>
+<td>切换到当前用户的主目录（/home/用户目录）</td>
+</tr>
+<tr>
+<td>cd.</td>
+<td>切换到当前目录</td>
+</tr>
+<tr>
+<td>cd..</td>
+<td>切换到上级目录</td>
+</tr>
+<tr>
+<td>cd-</td>
+<td>可进入上次所在的目录</td>
+</tr>
+</tbody>
+</table>
+<pre><code>&lt;7&gt;显示当前路径: pwd
 
 
 &lt;8&gt;创建目录: mkdir
@@ -175,13 +237,29 @@ grep一般格式为:
 在grep命令中输入字符串参数时，最好引号或双引号括起来。例如：grep&apos;a &apos;1.txt。
 
 常用选项说明：
-| 选项  | 含义  |
-|---   |---   |
-| -v  | 显示不含匹配文本的所有行(相当于求反）  |
-| -n  | 显示匹配行及行号  |
-| -i  | 忽略大小写  |
-
-grep搜索内容可以是正则表达式。
+</code></pre><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-v</td>
+<td>显示不含匹配文本的所有行(相当于求反）</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>显示匹配行及行号</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>忽略大小写</td>
+</tr>
+</tbody>
+</table>
+<pre><code>grep搜索内容可以是正则表达式。
 </code></pre>
       
     </div>
@@ -229,7 +307,7 @@ grep搜索内容可以是正则表达式。
   }(document, 'script', 'facebook-jssdk'));
 </script>
 
-<div class="fb-comments" data-href="http://yoursite.com/2017/05/07/Linux常用命令/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+<div class="fb-comments" data-href="http://yoursite.com/2017/03/28/Linux常用命令/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
       
   
 </section>
